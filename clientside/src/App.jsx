@@ -1,13 +1,18 @@
-import './App.css'
+import React from 'react';
+import AdminNavbar from './components/AdminNavbar';
+import Sidebar from './components/AdminSidebar';
+import Dashboard from './components/RegistryForm/Dashboard';
 
 function App() {
-
-
   return (
-    <>
-     <h1 className='font-bold text-4xl'>Good to go..!</h1>
-    </>
-  )
+    <div className="flex flex-col h-screen">
+      <AdminNavbar />
+      <div className="flex flex-1">
+        <Sidebar />
+        <Dashboard />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
