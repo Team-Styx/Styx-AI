@@ -10,21 +10,22 @@ const Dashboard = () => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [documents, setDocuments] = useState([
-    { name: 'Parth Parth', type: 'Insurance Policy', files: 1, links: 0, owner: 'user1', group: 'Legal' },
-    { name: 'Cyber Insurance Poli...', type: 'Insurance Policy', files: 0, links: 0, owner: 'user1', group: 'Legal' },
-    { name: 'Change Release Proce...', type: 'Procedure', files: 0, links: 0, owner: 'user2', group: 'Engineering' },
-    { name: 'Backup Restore Test', type: 'Test Report', files: 0, links: 0, owner: 'user3', group: 'DevOps' },
-    { name: 'SDLC Standards', type: 'Procedure', files: 0, links: 0, owner: 'user2', group: 'Engineering' },
+    { name: 'SDLC Standards', UseCase: 'Healthcare Diagnostics', files: 1, Policies: 'Restricted Phrases', Stack_Holder: 'user1', Risk_Assessment: 'High Risk' },
+    { name: 'Cyber Insurance Poli...', UseCase: 'Movie Recommendations', files: 0, Policies: 'Language Mismatch', Stack_Holder: 'user1', Risk_Assessment: 'Minimal Risk' },
+    { name: 'Change Release Proce...',  UseCase: 'Sentiment Analysis', files: 0, Policies: 'Toxicity Response', Stack_Holder: 'user2', Risk_Assessment: 'Limited Risk' },
+    { name: 'Backup Restore Test',  UseCase: 'Subliminal Techniques', files: 0, Policies: 'Task Adherence', Stack_Holder: 'user3', Risk_Assessment: 'Prohibited Risk' },
+    { name: 'SDLC Standards',  UseCase: 'Financial Fraud Detection', files: 0, Policies: 'SQL Hallucination', Stack_Holder: 'user2', Risk_Assessment: 'High Risk' },
   ]);
 
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
     documentId: '',
-    owner: '',
-    type: '',
-    group: '',
+    Stack_Holder: '',
+    UseCase: '',
+    Risk_Assessment: '',
     description: '',
+    Policies:'',
     files: null,
     fileUrl: '',
   });
@@ -37,10 +38,10 @@ const Dashboard = () => {
     setStep(1);
     setFormData({
       name: '',
-      documentId: '',
-      owner: '',
-      type: '',
-      group: '',
+      Stack_Holder: '',
+      UseCase: '',
+      Policies:'',
+      Risk_Assessment: '',
       description: '',
       files: null,
       fileUrl: '',
@@ -69,11 +70,11 @@ const Dashboard = () => {
     e.preventDefault();
     const newDocument = {
       name: formData.name,
-      type: formData.type,
+      UseCase: formData.UseCase,
       files: formData.files ? formData.files.length : 0,
-      links: formData.fileUrl ? 1 : 0,
-      owner: formData.owner,
-      group: formData.group,
+      Policies: formData.Policies,
+      Stack_Holder: formData.Stack_Holder,
+      Risk_Assessment: formData.Risk_Assessment,
     };
     setDocuments([...documents, newDocument]);
     setShowAddForm(false);
@@ -84,6 +85,7 @@ const Dashboard = () => {
       setStep(step + 1);
     }
   };
+  
 
   const prevStep = () => {
     if (step > 1) {

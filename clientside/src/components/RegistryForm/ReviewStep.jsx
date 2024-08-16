@@ -1,33 +1,35 @@
-// ReviewStep.jsx
 import React from 'react';
 
 function ReviewStep({ formData, addDocument, prevStep }) {
   return (
     <div>
-      {/* Review Document Details */}
-      <div className="mb-4">
+      <div className="my-4">
         <h3 className="text-lg font-semibold">Review Document Details</h3>
         <p className="text-gray-600">Please review the information you have provided before submitting.</p>
       </div>
       <div className="mb-4">
-        <h4 className="text-md font-semibold">Document Name:</h4>
+        <h4 className="text-md font-semibold">Project Name:</h4>
         <p>{formData.name}</p>
       </div>
       <div className="mb-4">
-        <h4 className="text-md font-semibold">Document ID:</h4>
-        <p>{formData.documentId}</p>
+        <h4 className="text-md font-semibold">Use Case:</h4>
+        <p>{formData.UseCase}</p>
       </div>
       <div className="mb-4">
-        <h4 className="text-md font-semibold">Owner:</h4>
-        <p>{formData.owner}</p>
+        <h4 className="text-md font-semibold">Stakeholders:</h4>
+        <p>{formData.Stack_Holder}</p>
+      </div>
+      {/* <div className="mb-4">
+        <h4 className="text-md font-semibold">Risk Assessment:</h4>
+        <p>{formData.Risk_Assessment}</p>
+      </div> */}
+      <div className="mb-4">
+        <h4 className="text-md font-semibold">Datasets used to Train:</h4>
+        <p>{formData.datasets}</p>
       </div>
       <div className="mb-4">
-        <h4 className="text-md font-semibold">Type:</h4>
-        <p>{formData.type}</p>
-      </div>
-      <div className="mb-4">
-        <h4 className="text-md font-semibold">Group:</h4>
-        <p>{formData.group}</p>
+        <h4 className="text-md font-semibold">Policies:</h4>
+        <p>{formData.Policies}</p>
       </div>
       <div className="mb-4">
         <h4 className="text-md font-semibold">Description:</h4>

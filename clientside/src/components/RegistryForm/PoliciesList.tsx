@@ -1,0 +1,22 @@
+export  const policiesList = [
+    'Restricted Phrases',
+    'Language Mismatch',
+    'Toxicity Response',
+    'Toxicity Prompts',
+    'Task Adherence',
+    'SQL Hallucination',
+    'PII Prompt',
+    'PII Response',
+    'RAG Hallination',
+    'Prompt Injection',
+    'Allowed Prompt',
+    'Allowed Response',
+    'SQL Read Only Acces',
+    'SQL Allowed Tables',
+    'Restricted Topics Response',
+    'Restricted Topics Prompts',
+    'AGT Test',
+    'SQL Load Limit',
+    'Comptetion Discussion Prompt',
+    'Comptetion Discussion Response'
+  ];

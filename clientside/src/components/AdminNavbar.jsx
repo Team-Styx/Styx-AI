@@ -18,13 +18,13 @@ export default function AdminNavbar() {
 
   return (
     <div className="border-border-light dark:border-primary-dark col-span-2 flex w-full items-center justify-between border-b bg-white/10 p-4 backdrop-blur-md dark:bg-black/30">
-      <p className="text-text-light dark:text-text-dark text-3xl font-black tracking-wide">
+      <p className="text-text-light dark:text-text-dark  text-lg lg:text-3xl font-black tracking-wide">
         Styx Dashboard
       </p>
 
       <div className="flex items-center space-x-4">
         <div className="flex items-center gap-3 space-x-2">
-          {isDarkMode ? (
+          {/* {isDarkMode ? (
             <FiSun
               className="text-text-light dark:text-text-dark h-5 w-5 cursor-pointer sm:h-6 sm:w-6 md:h-7 md:w-7"
               onClick={() => handleDarkModeClick()}
@@ -34,8 +34,8 @@ export default function AdminNavbar() {
               className="text-text-light h-5 w-5 cursor-pointer dark:text-white sm:h-6 sm:w-6 md:h-7 md:w-7"
               onClick={() => handleDarkModeClick()}
             />
-          )}
-          <h1 className="text-text-light text-lg font-semibold dark:text-white sm:text-xl md:text-2xl">
+          )} */}
+          <h1 className="hidden lg:block text-text-light text-lg font-semibold dark:text-white sm:text-xl md:text-2xl">
             Hi, Styx!
           </h1>
         </div>

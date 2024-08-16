@@ -1,4 +1,3 @@
-// Step2.jsx
 import React from 'react';
 
 const NewDocument = ({ formData, handleFileChange, handleFileBrowseClick, handleInputChange, nextStep, prevStep, fileInputRef, fileInputKey }) => {
